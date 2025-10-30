@@ -1,0 +1,55 @@
+[27-Oct-2025 18:57:52 Europe/Berlin] Error: No se encuentra vendor/autoload.php en C:\xampp1\htdocs\LibroRC/vendor/composer/autoload.php
+[27-Oct-2025 19:00:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 29
+[27-Oct-2025 19:00:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 30
+[27-Oct-2025 19:00:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 31
+[27-Oct-2025 19:00:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 32
+[27-Oct-2025 19:00:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 33
+[27-Oct-2025 19:00:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 35
+[27-Oct-2025 19:00:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 36
+[27-Oct-2025 19:00:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 37
+[27-Oct-2025 19:00:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 38
+[27-Oct-2025 19:00:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 39
+[27-Oct-2025 19:00:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 40
+[27-Oct-2025 19:00:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 42
+[27-Oct-2025 19:00:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 43
+[27-Oct-2025 19:00:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 44
+[27-Oct-2025 19:00:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 45
+[27-Oct-2025 19:00:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 46
+[27-Oct-2025 19:01:02 Europe/Berlin] Error al enviar correo: SMTP Error: data not accepted. SMTP server error: DATA END command failed Detail: The crecefinanzas.pe domain is not verified. Please, add and verify your domain on https://resend.com/domains
+ SMTP code: 450
+[27-Oct-2025 19:02:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 29
+[27-Oct-2025 19:02:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 30
+[27-Oct-2025 19:02:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 31
+[27-Oct-2025 19:02:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 32
+[27-Oct-2025 19:02:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 33
+[27-Oct-2025 19:02:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 35
+[27-Oct-2025 19:02:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 36
+[27-Oct-2025 19:02:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 37
+[27-Oct-2025 19:02:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 38
+[27-Oct-2025 19:02:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 39
+[27-Oct-2025 19:02:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 40
+[27-Oct-2025 19:02:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 42
+[27-Oct-2025 19:02:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 43
+[27-Oct-2025 19:02:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 44
+[27-Oct-2025 19:02:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 45
+[27-Oct-2025 19:02:08 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 46
+[27-Oct-2025 19:06:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 30
+[27-Oct-2025 19:06:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 31
+[27-Oct-2025 19:06:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 32
+[27-Oct-2025 19:06:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 33
+[27-Oct-2025 19:06:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 35
+[27-Oct-2025 19:06:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 36
+[27-Oct-2025 19:06:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 37
+[27-Oct-2025 19:06:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 38
+[27-Oct-2025 19:06:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 39
+[27-Oct-2025 19:06:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 40
+[27-Oct-2025 19:06:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 42
+[27-Oct-2025 19:06:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 43
+[27-Oct-2025 19:06:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 44
+[27-Oct-2025 19:06:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 45
+[27-Oct-2025 19:06:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 46
+[27-Oct-2025 19:08:17 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: filter_input(): Argument #4 ($options) must be of type array|int, string given in C:\xampp1\htdocs\LibroRC\enviar_RC.php:30
+Stack trace:
+#0 C:\xampp1\htdocs\LibroRC\enviar_RC.php(30): filter_input(0, 'tipo_documento', 3, 'UTF-8')
+#1 {main}
+  thrown in C:\xampp1\htdocs\LibroRC\enviar_RC.php on line 30

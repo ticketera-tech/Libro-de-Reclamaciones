@@ -1,0 +1,36 @@
+# FORZAR HTTPS - Redireccionar a SSL
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Desactivar los log
+php_flag display_errors Off
+
+# Prevenir acceso a otros archivos sensibles
+<FilesMatch "^(\.|php\.ini|\.log$|\.sql$|\.tpl$|\.bak$)">
+    Require all denied
+</FilesMatch>
+
+# PREVENIR LISTADO DE DIRECTORIOS
+Options -Indexes
+
+# PROTECCIÓN CONTRA ATAQUES BÁSICOS
+<IfModule mod_headers.c>
+    # Protección contra XSS
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # Prevenir clickjacking
+    Header set X-Frame-Options "SAMEORIGIN"
+    
+    # Prevenir sniffing de MIME
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# PROTECCIÓN DE ARCHIVOS SENSIBLES - CRÍTICO
+<Files "procesar-formulario.php">
+    Require all denied
+</Files>
+
+<Files "composer.json">
+    Require all denied
+</Files>
+

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libro de Reclamaciones</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      body {
+        background: #f4f4f4;
+        padding: 30px;
+      }
+      form {
+        background: #fff;
+        padding: 30px;
+        max-width: 900px;
+        margin: auto;
+        border-radius: 10px;
+        border: 2px solid #d32f2f; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .btn-primary {
+        background-color: #d32f2f;
+        border-color: #d32f2f;
+      }
+      .btn-primary:hover {
+        background-color: #b71c1c;
+      }
+      .eliminar-btn {
+        background: #f7931e;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      #lista-archivos li {
+        background: #eee;
+        margin: 5px 0;
+        padding: 8px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .aviso-legal {
+        margin-top: 30px;
+        padding: 15px;
+        background-color: #ffebee;
+        border-left: 4px solid #d32f2f;
+        font-size: 14px;
+        color: #333;
+      }
+
+    </style>
+  </head>
+  <body>
+    <form id="formularioReclamo" enctype="multipart/form-data">
+      <h3 class="text-center mb-4 text-danger">Libro de Reclamaciones</h3>
+
+      <!-- ====== Pie de página del Libro de Reclamaciones ====== -->
+       
+      <div style="background-color:#f5f5f5; 
+      border-top: 3px solid #c62828;
+      padding:15px; 
+      margin: top 10px;
+      text-align:center; 
+      font-family:Arial, sans-serif; 
+      border-radius: 6px;">
+
+      <p style="font-weight:bold; color:#333; font-size:18px; margin-bottom:5px;">
+      Sociedad Administradora Fondea Perú
+      </p>
+      <p style="color:#555;">RUC: *********</p>
+      <p style="color:#555;">Domicilio Legal: *******</p>
+      </div>
+
+      <!-- Datos Personales -->
+      <h5 class="text-danger border-bottom pb-2">Datos Personales</h5>
+      <div class="mb-3">
+        <label class="form-label">¿Quién soy?</label>
+        <select name="quien_soy" class="form-select" required>
+          <option value="">Seleccione...</option>
+          <option value="Inversor">Inversor</option>
+          <option value="Receptor (Empresas)">Receptor (Empresas)</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Tipo de documento</label>
+        <select id="tipo_documento" name="tipo_documento" class="form-select" required>
+          <option value="">Seleccione...</option>
+          <option value="DNI">DNI</option>
+          <option value="Número de pasaporte">Número de pasaporte</option>
+          <option value="Cédula de extranjería">Cédula de extranjería</option>
+          <option value="Otras">Otras</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Número de documento</label>
+        <input type="text" id="numero_documento" name="numero_documento" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Nombres y Apellidos</label>
+        <input type="text" id="nombres_apellidos" name="nombres_apellidos" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Teléfono celular</label>
+        <input type="tel" name="telefono" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Correo de contacto</label>
+        <input type="email" name="correo" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Domicilio</label>
+        <input type="text" id="domicilio" name="domicilio" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Departamento</label>
+        <select id="departamento" name="departamento" class="form-select" required>
+          <option value="">Seleccione...</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Provincia</label>
+        <select id="provincia" name="provincia" class="form-select" required disabled>
+          <option value="">Seleccione...</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Distrito</label>
+        <select id="distrito" name="distrito" class="form-select" required disabled>
+          <option value="">Seleccione...</option>
+        </select>
+      </div>
+      <!-- Identificación del bien contratado -->
+      <h5 class="text-danger border-bottom pb-2">Identificación del bien contratado</h5>
+      <div class="mb-3">
+        <label class="form-label">Tipo de bien contratado</label>
+        <select name="tipo_bien" class="form-select" required>
+          <option value="">Seleccione...</option>
+          <option value="Producto">Producto</option>
+          <option value="Servicio">Servicio</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Moneda del monto reclamado</label>
+        <select id="moneda" name="moneda" class="form-select" required>
+          <option value="">Seleccione...</option>
+          <option value="PEN">Soles (PEN)</option>
+          <option value="USD">Dólares (USD)</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Monto reclamado</label>
+        <input type="number" id="monto_reclamado" name="monto_reclamado" step="0.01" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Descripción del bien contratado</label>
+        <textarea name="descripcion_bien" class="form-control" rows="3" required></textarea>
+      </div>
+      <!-- Detalle de la reclamación y pedido del consumidor -->
+      <h5 class="text-danger border-bottom pb-2">Detalle de la reclamación y pedido del consumidor</h5>
+      <div class="mb-3">
+        <label class="form-label">Tipo de incidente</label>
+        <select id="tipo" name="tipo_incidente" class="form-select" required>
+          <option value="">Seleccione...</option>
+          <option value="Reclamo">Reclamo: Disconformidad relacionada a los productos o servicios</option>
+          <option value="Queja">Queja: Disconformidad no relacionada a los productos o servicios; o, malestar o descontento respecto a la atención al público</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Fecha de incidencia</label>
+        <input type="date" id="fecha_incidencia" name="fecha_incidencia" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" id="label-detalle-reclamo">Detalle del Reclamo</label>
+        <textarea id="detalle_reclamo" name="detalle_reclamo" class="form-control" rows="5" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Solicitud o Pedido</label>
+        <textarea name="solicitud" class="form-control" rows="3" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Adjuntar documentos (PDF, PNG, JPG):</label>
+        <input type="file" id="archivos" class="form-control" accept=".pdf,.jpg,.jpeg,.png" multiple />
+        <ul id="lista-archivos" class="mt-2"></ul>
+      </div>
+      <!-- Aviso Legal -->
+      <div class="aviso-legal">
+        <p><strong>Aviso legal:</strong></p>
+        <p>La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante INDECOPI.</p>
+        <p>La Sociedad Administradora deberá dar respuesta al reclamo en un plazo no mayor a treinta (30) días calendario, pudiendo ampliar el plazo hasta por treinta (30) días más, previa comunicación al consumidor.</p>
+        <p>La información proporcionada será tratada conforme a la Ley de Protección de Datos Personales (Ley N.° 29733) y solo será utilizada para la gestión del presente reclamo o queja.</p>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Enviar Reclamo</button>
+    </form>
+    <!-- Modal de Confirmación -->
+    <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-danger">
+          <div class="modal-header" style="background-color: #d32f2f">
+            <h5 class="modal-title text-white" id="modalLabel">Confirmación</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body text-center text-danger">
+            ¡Tu solicitud ha sido enviada exitosamente!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Aceptar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let archivosSeleccionados = [];
+      let ubigeoData = null;
+      // Ubigeo cascading
+      async function loadUbigeo() {
+        try {
+          const response = await fetch('https://free.e-api.net.pe/ubigeos.json');
+          ubigeoData = await response.json();
+          populateDepartamentos();
+        } catch (error) {
+          console.error('Error loading ubigeo:', error);
+        }
+      }
+      function populateDepartamentos() {
+        const deptSelect = document.getElementById('departamento');
+        Object.keys(ubigeoData).forEach(dept => {
+          const option = document.createElement('option');
+          option.value = dept;
+          option.textContent = dept;
+          deptSelect.appendChild(option);
+        });
+      }
+      document.getElementById('departamento').addEventListener('change', (e) => {
+        const provSelect = document.getElementById('provincia');
+        provSelect.innerHTML = '<option value="">Seleccione...</option>';
+        provSelect.disabled = false;
+        document.getElementById('distrito').innerHTML = '<option value="">Seleccione...</option>';
+        document.getElementById('distrito').disabled = true;
+        const dept = e.target.value;
+        if (dept && ubigeoData[dept]) {
+          Object.keys(ubigeoData[dept]).forEach(prov => {
+            const option = document.createElement('option');
+            option.value = prov;
+            option.textContent = prov;
+            provSelect.appendChild(option);
+          });
+        }
+      });
+      document.getElementById('provincia').addEventListener('change', (e) => {
+        const distSelect = document.getElementById('distrito');
+        distSelect.innerHTML = '<option value="">Seleccione...</option>';
+        distSelect.disabled = false;
+        const dept = document.getElementById('departamento').value;
+        const prov = e.target.value;
+        if (dept && prov && ubigeoData[dept][prov]) {
+          Object.keys(ubigeoData[dept][prov]).forEach(dist => {
+            const option = document.createElement('option');
+            option.value = dist;
+            option.textContent = dist;
+            distSelect.appendChild(option);
+          });
+        }
+      });
+      loadUbigeo();
+      // Manejo de archivos
+      document.getElementById("archivos").addEventListener("change", function (e) {
+        for (const archivo of e.target.files) {
+          archivosSeleccionados.push(archivo);
+        }
+        e.target.value = "";
+        mostrarArchivos();
+      });
+      function mostrarArchivos() {
+        const lista = document.getElementById("lista-archivos");
+        lista.innerHTML = "";
+        if (archivosSeleccionados.length === 0) {
+          const li = document.createElement("li");
+          li.textContent = "No se han seleccionado archivos.";
+          lista.appendChild(li);
+          return;
+        }
+        archivosSeleccionados.forEach((archivo, index) => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+            ${archivo.name} (${(archivo.size / 1024 / 1024).toFixed(2)} MB)
+            <button class="eliminar-btn" onclick="eliminarArchivo(${index})">Eliminar</button>
+          `;
+          lista.appendChild(li);
+        });
+      }
+      function eliminarArchivo(index) {
+        archivosSeleccionados.splice(index, 1);
+        mostrarArchivos();
+      }
+      // Cambiar label dinámico
+      document.getElementById("tipo").addEventListener("change", function () {
+        const tipoSeleccionado = this.value;
+        const label = document.getElementById("label-detalle-reclamo");
+        if (tipoSeleccionado === "Reclamo") {
+          label.textContent = "Detalle del Reclamo:";
+        } else if (tipoSeleccionado === "Queja") {
+          label.textContent = "Detalle de la Queja:";
+        } else {
+          label.textContent = "Detalle del Reclamo:";
+        }
+      });
+      // Submit AJAX
+      document.getElementById("formularioReclamo").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const boton = this.querySelector('button[type="submit"]');
+        boton.disabled = true;
+        boton.textContent = "Enviando...";
+        // Validar archivos
+        const tiposPermitidos = ["application/pdf", "image/jpeg", "image/png"];
+        const tamanoMaximo = 20 * 1024 * 1024; // 20 MB
+        for (let archivo of archivosSeleccionados) {
+          if (!tiposPermitidos.includes(archivo.type)) {
+            alert(`Tipo de archivo no permitido: ${archivo.name}\n\nFormatos permitidos: PDF, JPG, PNG`);
+            boton.disabled = false;
+            boton.textContent = "Enviar Reclamo";
+            return;
+          }
+          if (archivo.size > tamanoMaximo) {
+            alert(`Archivo demasiado grande: ${archivo.name}`);
+            boton.disabled = false;
+            boton.textContent = "Enviar Reclamo";
+            return;
+          }
+        }
+        const formData = new FormData(this);
+        archivosSeleccionados.forEach((archivo) => {
+          formData.append("archivos[]", archivo);
+        });
+        fetch("enviar_RC.php", {
+          method: "POST",
+          body: formData,
+        })
+          .then((res) => {
+            if (!res.ok) {
+              throw new Error(`HTTP error! Status: ${res.status}`);
+            }
+            return res.text();
+          })
+          .then((data) => {
+            const modal = new bootstrap.Modal(document.getElementById("modalConfirmacion"));
+            document.querySelector("#modalConfirmacion .modal-body").innerHTML = 
+              `¡Tu solicitud ha sido enviada exitosamente!<br><strong>Código asignado:</strong> ${data}`;
+            modal.show();
+            document.getElementById("formularioReclamo").reset();
+            archivosSeleccionados = [];
+            mostrarArchivos();
+            boton.disabled = false;
+            boton.textContent = "Enviar Reclamo";
+          })
+          .catch((err) => {
+            alert("Error al enviar: " + err.message);
+            boton.disabled = false;
+            boton.textContent = "Enviar Reclamo";
+          });
+      });
+      mostrarArchivos();
+    </script>
+  </body>
+</html>
